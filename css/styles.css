@@ -1,0 +1,270 @@
+:root {
+  --primary-color: rgb(53, 123, 112);
+  --secondary-color: rgb(224, 179, 84);
+  --main-text-color: rgb(68, 68, 64);
+  --darker-primary-color: rgb(36, 85, 78);
+  --button-border-bottom: rgba(0, 0, 0, 0.3);
+  --lighter-secondary-color: rgb(244, 215, 153);
+  --grid-background-color: rgb(238, 238, 238);
+  --button-text-color: rgb(255, 255, 255);
+  --headings-font-weight: 700;
+  --body-font-weight: 400;
+  --body-font-size: 16px;
+  --button-border-radius: 3px;
+}
+
+a {
+  color: var(--primary-color);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: var(--body-font-weight);
+  font-size: var(--body-font-size);
+  line-height: 1.6;
+  color: var(--main-text-color);
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: var(--headings-font-weight);
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: var(--headings-font-weight);
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: var(--headings-font-weight);
+}
+
+a {
+  font-size: var(--body-font-size);
+}
+
+button {
+  border: none;
+  font-family: inherit;
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: var(--button-border-radius);
+  border-bottom: 2px solid var(--button-border-bottom);
+}
+
+button:hover,
+button:focus {
+  background-color: var(--darker-primary-color);
+  cursor: pointer;
+  opacity: 0.8;
+  border-radius: var(--button-border-radius);
+}
+
+button:active {
+  background-color: var(--secondary-color);
+  border-radius: var(--button-border-radius);
+}
+
+button:focus {
+  border: 2px solid;
+}
+
+.button_secondary {
+  background-color: var(--secondary-color);
+  color: var(--main-text-color);
+  border-radius: var(--button-border-radius);
+}
+
+a {
+  color: var(--primary-color);
+  font-size: var(--body-font-size);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: var(--button-text-color);
+  background-color: var(--darker-primary-color);
+}
+
+a:visited {
+  /* visited link */
+  color: var(--primary-color);
+}
+
+a:active {
+  /* selected link */
+  color: var(--secondary-color);
+}
+
+.profile__portrait {
+  float: left;
+  width: 250px;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.main-text {
+  text-align: left;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page-header {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 400%;
+}
+
+.page-header__item {
+  flex: 0 1 200px;
+  height: 55px;
+}
+
+.page-header .page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.navigation-list {
+  /* display: flex; */
+  list-style-type: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.grid__item {
+  background-color: var(--grid-background-color);
+  padding: 20px;
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
+
+.button {
+  border: none;
+  display: inline-block;
+  font-family: inherit;
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: var(--button-border-radius);
+  border-bottom: 2px solid var(--button-border-bottom);
+  transition: opacity 0.4s;
+}
+
+.button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.about {
+  display: center;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-list {
+  list-style-type: none;
+}
+
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+
+  50% {
+    fill: #fcffad;
+  }
+
+  100% {
+    fill: #f76414;
+  }
+}
+
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
